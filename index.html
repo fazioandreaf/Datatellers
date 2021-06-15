@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tic-tac-toe</title>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+    <!-- cdn vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
     <link rel="stylesheet" href="">
 </head>
 <body>
+    <header>
+        <a href="">Start a new game</a>
+        <select name="difficult" id="">
+            <option value="">Easy</option>
+            <option value="">Medium</option>
+            <option value="">Hard</option>
+        </select>
+        <div class="switch">
+            <i v-if="light_dark"class="far fa-sun"></i>
+            <i v-else class="far fa-moon"></i>
+        </div>
+    </header>
+    <footer>
+        Score 
+    </footer>
     
 </body>
 </html>

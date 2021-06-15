@@ -13,3 +13,10 @@ server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+
+
+document.addEventListener('DOMContentLoader',function init(){
+  new Vue=({
+    el:'#app',
+  })
+})
