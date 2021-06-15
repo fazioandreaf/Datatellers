@@ -6,27 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tic-tac-toe</title>
     <!-- fontawesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- cdn vue-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
-    <link rel="stylesheet" href="">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <a href="">Start a new game</a>
-        <select name="difficult" id="">
-            <option value="">Easy</option>
-            <option value="">Medium</option>
-            <option value="">Hard</option>
-        </select>
-        <div class="switch">
-            <i v-if="light_dark"class="far fa-sun"></i>
-            <i v-else class="far fa-moon"></i>
-        </div>
-    </header>
-    <footer>
-        Score 
-    </footer>
+    <div id="app">
+
+        <header>
+            <a href="">Start a new game</a>
+            <select name="difficult" id="">
+                <option value="">Easy</option>
+                <option value="">Medium</option>
+                <option value="">Hard</option>
+            </select>
+            <div class="switch">
+                <a href="#" @click="toggle">
+
+                    <i v-if="light_dark"class="far fa-sun"></i>
+                    <i v-else class="far fa-moon"></i>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="table">
+                <div class="zone">
+                    <a href="">
+                        <i v-if="me_pc" class="fas fa-times"></i>
+                        <i v-else class="far fa-circle"></i>
+                    </a>
+                </div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+                <div class="zone"></div>
+            </div>
+        </main>
+        <footer>
+            Score 
+        </footer>
+    </div>
     
 </body>
 </html>
