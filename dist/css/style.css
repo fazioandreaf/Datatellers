@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  background-color: lightgrey;
+}
+* body header,
+* body footer {
+  background-color: grey;
+  height: 10vh;
+}
+* body header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+* body header > * {
+  flex-basis: 20%;
+  align-self: center;
+}
+* body .switch {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+}
+* body main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+* body main #table {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+* body main #table > * {
+  background-color: white;
+  border: 1px solid black;
+  flex-basis: 33%;
+}
+* body main .zone > a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+* body main .zone > a i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8rem;
+  opacity: 0;
+}
