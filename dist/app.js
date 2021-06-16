@@ -13,12 +13,15 @@ document.addEventListener("DOMContentLoaded", function init() {
     data: {
       light_dark: true,
       me_pc: true,
-      counter: 0
+      counter: 0,
+      grid: ''
     },
     mounted: function mounted() {
       for (var i = 0; i < 9; i++) {
-        document.getElementById("table").innerHTML += '<div class="zone"><a href="#" @click="move"><i v-if="me_pc" class="fas fa-times"></i><i v-else class="far a-circle"></i></a></div>';
+        this.grid += "<div class=\"zone\"><a href=\"#\" @click=\"move\"><i v-if=\"me_pc\" class=\"fas fa-times\"></i><i v-else class=\"far a-circle\"></i></a></div>";
       }
+
+      console.log(this.grid);
     },
     methods: {
       toggle: function toggle() {

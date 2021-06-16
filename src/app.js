@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function init() {
   let app = new Vue({
     el: "#app",
@@ -5,11 +8,12 @@ document.addEventListener("DOMContentLoaded", function init() {
       light_dark: true,
       me_pc: true,
       counter: 0,
+      grid:`<div class="zone">`+`<a href="#" @click="move">`+`<i v-if="me_pc" class="fas fa-times"></i>`+`<i v-else class="far a-circle"></i>`+`</a>`+`</div>`,
     },
     mounted: function () {
       for (let i = 0; i < 9; i++) {
-        document.getElementById("table").innerHTML +=
-          '<div class="zone"><a href="#" @click="move"><i v-if="me_pc" class="fas fa-times"></i><i v-else class="far a-circle"></i></a></div>';
+        this.grid +=
+          `<div class="zone"><a href="#" @click="move"><i v-if="me_pc" class="fas fa-times"></i><i v-else class="far a-circle"></i></a></div>`;
       }
     },
 
